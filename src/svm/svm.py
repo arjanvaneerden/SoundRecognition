@@ -1,6 +1,6 @@
 from sklearn import svm
 import numpy as np
-from sklearn import preprocessing.MinMaxScaler as scale
+#from sklearn import preprocessing.MinMaxScaler as scale
 
 class SVM:
 	def __init__(self):
@@ -19,13 +19,13 @@ class SVM:
 		return scale.fit_transform(data)
 
 
-	def optimize():
+#	def optimize():
 
 
-	def getFeatures(self, array):
+	#def getFeatures(self, array):
 		#FIXME multi channel support 
 		#sum over column
-		column = np.sum(array, 0)
+		#column = np.sum(array, 0)
 		#sum over rows
-		row = np.sum(array, 1)
-		return (column, row)
+		#row = np.sum(array, 1)
+		#return (column, row)
