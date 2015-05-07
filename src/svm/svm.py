@@ -22,10 +22,10 @@ class SVM:
 #	def optimize():
 
 
-	#def getFeatures(self, array):
+	def getFeatures(self, data):
 		#FIXME multi channel support 
 		#sum over column
-		#column = np.sum(array, 0)
+		column = np.sum(data, 0)
 		#sum over rows
-		#row = np.sum(array, 1)
-		#return (column, row)
+		row = np.sum(data, 1)
+		return (column, row)
