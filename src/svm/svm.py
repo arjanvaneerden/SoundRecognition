@@ -1,6 +1,7 @@
 from sklearn import svm
 import numpy as np
 import cPickle as pickle
+import features
 
 class SVM:
 	def __init__(self, C = 1.0, kernel = "rbf", gamma = 0.0, coef0 = 0.0, probability = True, tol = 0.001, verbose = False):
@@ -40,74 +41,3 @@ class SVM:
 			print "Could not load SVM"
 			return False
 		return True
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-	def getCochleagram(self):
-		#FIXME read cochleagram files
-		return
-
-	def getAnnotation(self):
-		#FIXME read annotation files
-		return 
-	
-	def scaleData(self, data, (x, y)):
-		scale = scale((x, y))
-		return scale.fit_transform(data)
-
-
-#	def optimize():
-
-
-	def getFeatures(self, data):
-		#FIXME multi channel support 
-		#sum over column
-		column = np.sum(data, 0)
-		#sum over rows
-		row = np.sum(data, 1)
-		return (column, row)
